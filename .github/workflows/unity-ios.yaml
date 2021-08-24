@@ -15,6 +15,9 @@ jobs:
       - name: Print working directory
         run: pwd
 
+      - name: LFS pull
+        run: git lfs pull
+
       - name: Install the Apple certificate and provisioning profile
         env:
           BUILD_CERTIFICATE_BASE64_DEV: ${{ secrets.BUILD_CERTIFICATE_BASE64_DEV }}
